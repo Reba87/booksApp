@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root {
+    --primeraFuente: 'Bebas Neue', cursive;
+}
+
+.menu {
+    background: rgb(3, 23, 63);
+    background: linear-gradient(90deg, rgba(102, 164, 188, 1) 0%, rgba(3, 23, 63, 1) 67%, rgba(3, 53, 63, 1) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    z-index: 100;
+}
+.logo{
+    max-width:60px;
+    height:auto;
+    margin-left: 20px;
+}
+.menu__enlaces {
+    color: white;
+    margin-left: 30px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
