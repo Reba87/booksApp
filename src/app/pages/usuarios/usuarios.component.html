@@ -1,0 +1,28 @@
+<section class="section-usuario"> 
+
+  <article class="info-usuario">
+    <h1 class="titleUsu">INFORMACION USUARIO</h1>
+    <img class="photoPerfil" src="{{ miUsuario.url }}" />
+    <h1 class="NameUsua">{{ miUsuario.nombreCompleto() }}</h1>
+    <p class="titleInfo">Nombre:</p>
+    <input class="infoRegis" id="nameRegis" value="{{ miUsuario.nombre }}" />
+    <p class="titleInfo">Apellido:</p>
+    <input type="text" class="infoRegis" id="apellidoRegis" value="{{ miUsuario.apellidos }}" />
+    <p class="titleInfo">Correo:</p>
+    <input type="email" type="reset" class="infoRegis" id="emailRegis" value="{{ miUsuario.correo }}" />
+  </article>
+  
+  <article class="registro-usuario">
+    <h1 class="titleRegUsua">REGISTRO USUARIO</h1>
+    <input type="reset" type="text" class="regisUsua" #nameRegis placeholder="Nombre" />
+    <input type="reset" type="text" class="regisUsua" #apellidoRegis placeholder="Apellido" />
+    <input type="reset" type="email" class="regisUsua" #emailRegis placeholder="Email" />
+    <input type="reset" type="url" class="regisUsua" #urlRegis placeholder="URL Foto perfil" />
+    <input type="reset" type="password" class="regisUsua" #passwordRegis placeholder="Contraseña" />
+    <!-- <input type="password" class="regisUsua" id="passwordRegis" placeholder="Repita Contraseña"> -->
+    <div class="boton">
+      <button type="reset" (click)=enviar(nameRegis.value,apellidoRegis.value,emailRegis.value,urlRegis.value,passwordRegis.value) class="moreInf">Modificar Datos</button>
+    </div>
+  </article>
+</section>
+
