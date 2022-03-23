@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=League+Gothic&display=swap');
 :root {
   --primeraFuente: 'Bebas Neue', cursive;
 }
@@ -38,9 +37,12 @@
   margin-left: 20px;
 
 }
-.titleHome {
-  font-family: 'Merriweather Sans', sans-serif;
-  color: white;
+.titleHome { 
+  font-family: 'League Gothic', sans-serif;
+  font-size: 120px;
+  color: rgb(255,178,46);
+  margin-left: 140px;
+  text-align:left;
 }
 .moreInf {
   appearance: button;

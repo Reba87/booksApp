@@ -1,0 +1,34 @@
+<section class="libroRe">
+    
+        <article class="registro-libros">
+            <h1 class="titleRegUsua">Ingrese un libro</h1>
+            <input type="number" class="regisBook" #idLibro placeholder="ID Libro" />
+            <input type="number" class="regisBook" #idUsua placeholder="ID Usuario" />
+            <input type="text" class="regisBook" #titulo placeholder="Titulo" />
+            <input type="text" class="regisBook" #tipoBook placeholder="Tipo de libro" />
+            <input type="text" class="regisBook" #autor placeholder="Autor" />
+            <input type="number" class="regisBook" #precioBook placeholder="Precio" />
+            <input type="text" class="regisBook" #urlBook placeholder="URL foto libro" />
+
+            <div class="boton">
+                <button type="reset" class="moreInf" (click)=nuevoLibro(idLibro.value,idUsua.value,titulo.value,tipoBook.value,autor.value,precioBook.value,urlBook.value)>Añadir</button>
+            </div>
+        </article>
+
+        <article class="registro-libros">
+            <h1 class="titleRegUsua">Editar datos</h1>
+            <input type="number" class="regisBook" #editIdLibro placeholder="ID Libro" />
+            <input type="number" class="regisBook" #editIdUsua placeholder="ID Usuario" />
+            <input type="text" class="regisBook" #editTitulo placeholder="Titulo" />
+            <input type="text" class="regisBook" #editTipoBook placeholder="Tipo de libro" />
+            <input type="text" class="regisBook" #editAutor placeholder="Autor" />
+            <input type="number" class="regisBook" #editPrecioBook placeholder="Precio" />
+            <input type="text" class="regisBook" #editUrlBook placeholder="URL foto libro" />
+
+            <div class="boton">
+                <button type="reset" class="moreInf" (click)=editLibro(editIdLibro.value,editIdUsua.value,editTitulo.value,editTipoBook.value,editAutor.value,editPrecioBook.value,editUrlBook.value)>Modificar</button>
+            </div>
+        </article>
+   
+
+</section>

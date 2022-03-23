@@ -16,6 +16,7 @@
     margin-top: 10px;
     top: 0px;
     z-index: 100;
+    overflow: hidden;
 }
 .logo{
     max-width:60px;
@@ -28,4 +29,7 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 22px;
     text-decoration: none;
+}
+.menu__enlaces:hover {
+    color: rgb(255,178,46);
 }

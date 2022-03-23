@@ -11,6 +11,9 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FormularioRegistroComponent } from './component/formulario-registro/formulario-registro.component';
 import { LibrosComponent } from './pages/libros/libros.component';
+import { RefPipe } from './pipe/ref.pipe';
+import { RegistrolibroComponent } from './pages/registrolibro/registrolibro.component';
+import { ToArrayPipe } from './pipe/to-array.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { LibrosComponent } from './pages/libros/libros.component';
     UsuariosComponent,
     AboutComponent,
     FormularioRegistroComponent,
-    LibrosComponent
+    LibrosComponent,
+    RefPipe,
+    RegistrolibroComponent,
+    ToArrayPipe
   ],
   imports: [
     BrowserModule,
