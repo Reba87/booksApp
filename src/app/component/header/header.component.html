@@ -2,10 +2,12 @@
     <nav class="menu">
     <img class="logo" src="./assets/logo.png" alt="logo">
     <a class="menu__enlaces" routerLink="/home">Home</a>
+    <a class="menu__enlaces" routerLink="/Login">login</a>
     <a class="menu__enlaces" routerLink="/registro">Registro</a>
+    <div *ngIf= "this.apiService.logueado == true">
     <a class="menu__enlaces" routerLink="/usuarios">Usuarios</a>
     <a class="menu__enlaces" routerLink="/libros">Libros</a>
     <a class="menu__enlaces" routerLink="/registro-libros">Registro Libros</a>
-
+    </div>
     </nav>
 </header>

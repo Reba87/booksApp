@@ -2,15 +2,15 @@
 
     <article class="buscadora">
         <input type="number"placeholder="Busca un libro por ID" class="buscador" #id_Libro/>
-         <button class="btn-comprar" type="reset" (click)= buscar(id_Libro.value)>Buscar</button>
+         <button class="btn-comprar" type="reset" (click)= getbuscar(id_Libro.value)>Buscar</button>
     </article>
         
     <article class="container-books">
 
-        <div class="card-libro" *ngFor ="let libros of misLibros; let even=even let odd=odd">
+        <div class="card-libro" *ngFor ="let libros of this.misLibros let even=even let odd=odd">;
             <div class="containerFoto">
-                <button class="btnEliminar" (click)=delete(libros.id_libro)>X</button>
-                <img class="fotoBook" src="{{libros.fotoLibro}}">
+                <button class="btnEliminar" (click)=deletLibro(libros.id_libro)>X</button>
+                <img class="fotoBook" src="{{libros.foto}}">
                 
             </div>
             <p class="tipoLibro">{{libros.tipoLibro}}</p>           

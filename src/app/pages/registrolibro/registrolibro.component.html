@@ -2,16 +2,16 @@
     
         <article class="registro-libros">
             <h1 class="titleRegUsua">Ingrese un libro</h1>
-            <input type="number" class="regisBook" #idLibro placeholder="ID Libro" />
-            <input type="number" class="regisBook" #idUsua placeholder="ID Usuario" />
+            <!-- <input type="number" class="regisBook" #idLibro placeholder="ID Libro" /> -->
+            <input type="number" class="regisBook" #id_usuario placeholder="ID Usuario" />
             <input type="text" class="regisBook" #titulo placeholder="Titulo" />
-            <input type="text" class="regisBook" #tipoBook placeholder="Tipo de libro" />
+            <input type="text" class="regisBook" #tipoLibro placeholder="Tipo de libro" />
             <input type="text" class="regisBook" #autor placeholder="Autor" />
-            <input type="number" class="regisBook" #precioBook placeholder="Precio" />
-            <input type="text" class="regisBook" #urlBook placeholder="URL foto libro" />
+            <input type="number" class="regisBook" #precio placeholder="Precio" />
+            <input type="text" class="regisBook" #fotoLibro placeholder="URL foto libro" />
 
             <div class="boton">
-                <button type="reset" class="moreInf" (click)=nuevoLibro(idLibro.value,idUsua.value,titulo.value,tipoBook.value,autor.value,precioBook.value,urlBook.value)>Añadir</button>
+                <button type="reset" class="moreInf" (click)=nuevoLibro(id_usuario.value,titulo.value,tipoLibro.value,autor.value,precio.value,fotoLibro.value)>Añadir</button>
             </div>
         </article>
 

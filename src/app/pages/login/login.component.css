@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans&display=swap');
+
+:root {
+  --primeraFuente: 'Bebas Neue', cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+.section-registro {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  background-image: url("../../../assets/fondoLogin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.registro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 420px;
+  height: 500px;
+  margin-top: 160px;
+  margin-right: 300px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.603);
+  background: rgba(255, 255, 255, 0.596);
+
+
+}
+
+.logo {
+  width: 100px;
+  margin-top: 40px;
+}
+
+.titleReg {
+
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.login {
+  width: 400px;
+  height: 35px;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  
+
+}
+.btn-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 15px 38px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    color: #ffffff;
+    background-color: #0059ff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.15s linear;
+    width: 200px;
+    height: 40px;
+    margin-top: 40px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size:16px;
+  }
+  
+  .btn-login:hover {
+    background-color: rgba(33, 197, 0, 0.904);
+    border-color: #1add00;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  .btn-login:active {
+    background-color: rgb(0, 211, 0);
+    border-color: rgb(0, 211, 0);
+    color: #000000;
+    transform: translateY(5px) scale(0.95);
+  }
+  
+  .btn-login:disabled {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #8e8e93;
+    border-color: #8e8e93;
+  }
+
+.txtNuevo {
+  color: #4d4d4d;
+  text-decoration: none;
+  margin-top: 40px;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.txtNuevo:hover {
+  color: #0d0080
+}

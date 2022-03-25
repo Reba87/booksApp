@@ -17,6 +17,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  max-height: 200vh;
   overflow: hidden;
 }
 .buscadora{
@@ -27,6 +28,7 @@
   height:50px;
   justify-content:center;
   align-items:flex-end;
+  margin-top: 100px;
 }
 .buscador {
   background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
@@ -45,7 +47,7 @@
 /*CONTENEDOR LIBROS*/
 .container-books {  
   min-width: 100%;
-  height: 840px;
+  min-height: 100vh;
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -106,7 +108,7 @@
 }
 .autor {
   font-family: "Merriweather Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 5px;
   margin-left: 5px;
 }

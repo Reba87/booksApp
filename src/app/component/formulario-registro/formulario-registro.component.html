@@ -1,12 +1,13 @@
 <article class="registro">
-    <h1 class="titleReg">REGISTRO BOOKS APP</h1>
-    <input type="text" class="regis" id="nameRegis" placeholder="Nombre">
-    <input type="text" class="regis" id="apellidoRegis" placeholder="Apellido">
-    <input type="email" class="regis" id="emailRegis" placeholder="Email">
-    <input type="url" class="regis" id="urlRegis" placeholder="URL">
-    <input type="password" class="regis" id="passwordRegis" placeholder="Contraseña">
-    <input type="password" class="regis" id="passwordRegis" placeholder="Repita Contraseña">
+  <img class="logo" src="../../../assets/logo.png">
+    <h1 class="titleReg">REGISTRO USUARIOS</h1>
+    <input type="text" class="regis" #nameRegis placeholder="Nombre">
+    <input type="text" class="regis"  #apellidoRegis placeholder="Apellido">
+    <input type="email" class="regis" #emailRegis placeholder="Email">
+    <input type="url" class="regis" #urlRegis placeholder="URL">
+    <input type="password" class="regis" #passwordRegis placeholder="Contraseña">
+    <input type="password" class="regis" #repitpasswordRegis placeholder="Repita Contraseña">
   <div class="boton">
-      <button type="button" href="#" class="moreInf">Registrarme</button>
+      <button type="button" (click)=insertarUsuario(nameRegis.value,apellidoRegis.value,emailRegis.value,urlRegis.value,passwordRegis.value,repitpasswordRegis.value) class="moreInf">Registrarme</button>
   </div>      
 </article>

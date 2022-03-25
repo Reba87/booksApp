@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { LibrosComponent } from './pages/libros/libros.component';
 import { RefPipe } from './pipe/ref.pipe';
 import { RegistrolibroComponent } from './pages/registrolibro/registrolibro.component';
 import { ToArrayPipe } from './pipe/to-array.pipe';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { ToArrayPipe } from './pipe/to-array.pipe';
     LibrosComponent,
     RefPipe,
     RegistrolibroComponent,
-    ToArrayPipe
+    ToArrayPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

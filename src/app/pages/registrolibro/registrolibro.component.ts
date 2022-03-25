@@ -8,42 +8,50 @@ import {Libro} from '../../models/libro'
 })
 export class RegistrolibroComponent implements OnInit {
 
-  constructor(public librosService : LibrosService) {
+  constructor(public apiService : LibrosService) {
     
   }
 
 
-  nuevoLibro(
-    id_libro:string,
+  nuevoLibro(      
     id_usuario:string,
     titulo:string,
     tipo:string,
-    autor : string,
-    precio: string,
-    URL:string)
+    autor:string,
+    precio:string,
+    foto:string)
     {
-      let libros = new Libro (Number(id_libro),Number(id_usuario),titulo,tipo,autor,Number(precio),URL)
+      this.apiService.postLibro(new Libro(0,Number(id_usuario),titulo,tipo,autor,Number(precio),foto))
+      .subscribe((data) => {
+       
+      console.log(data)
       
-      this.librosService.addLibro (libros);
-      
-     console.log(libros)
+      alert("Libro creado correctamente")
+      })
       
     }
     
-    editLibro(id_libro:string,
+    editLibro(
+      id_libro:string,
       id_usuario:string,
       titulo:string,
       tipo:string,
-      autor : string,
-      precio: string,
-      url:string){
-               
-          let libros = new Libro (Number(id_libro),Number(id_usuario),titulo,tipo,autor,Number(precio),url)
-          // console.log(libros)
-          this.librosService.putLibro(libros)
+      autor:string,
+      precio:string,
+      foto:string){
+          if(id_libro == ""){
+            alert("Falta el ID del libro")
+          }
+          else{
+            
+             this.apiService.putLibro(new Libro(Number(id_libro),Number(id_usuario),titulo,tipo,autor,Number(precio),foto))
+            .subscribe((data) => {
+              console.log(data)
+              alert("Libro modificado correctamente")
+            })
+          }
+       
           
-
-        
       }
     
   ngOnInit(): void {

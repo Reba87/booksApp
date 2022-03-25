@@ -1,0 +1,17 @@
+<section class="section-registro">
+
+    <article class="registro">
+        <img class="logo" src="../../../assets/logo.png">
+        <h1 class="titleReg">The Book Place</h1>
+        <input type="text" class="login" #correo placeholder="Correo">
+        <input type="password" class="login" #contrasena placeholder="Contraseña">
+        
+      <div class="boton">
+          <button type="button" class="btn-login" (click)=loginUsuario(correo.value,contrasena.value)>Iniciar sesión</button>          
+      </div>    
+      <a  type="button" class="txtNuevo" routerLink="/registro">¿No tienes cuenta? Registrate</a>  
+    </article>
+    
+    
+</section>
+    

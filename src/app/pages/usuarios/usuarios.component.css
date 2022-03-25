@@ -82,16 +82,23 @@
   width: 600px;
   height: 700px;
   margin-top: 100px;
-
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.603);
   background: transparent;
+}
+.logo{
+  width:120px;
+  margin-top: 60px;
+
 }
 .titleRegUsua {
   font-family: "Merriweather Sans", sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 50px;
-  margin-bottom: 80px;
-  margin-top: 60px;
+  font-size: 40px;
+  font-style: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;
+ 
+  
 }
 .regisUsua {
   width: 520px;
