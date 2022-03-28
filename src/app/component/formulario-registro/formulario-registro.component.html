@@ -1,13 +1,68 @@
 <article class="registro">
   <img class="logo" src="../../../assets/logo.png">
-    <h1 class="titleReg">REGISTRO USUARIOS</h1>
-    <input type="text" class="regis" #nameRegis placeholder="Nombre">
-    <input type="text" class="regis"  #apellidoRegis placeholder="Apellido">
-    <input type="email" class="regis" #emailRegis placeholder="Email">
-    <input type="url" class="regis" #urlRegis placeholder="URL">
-    <input type="password" class="regis" #passwordRegis placeholder="Contraseña">
-    <input type="password" class="regis" #repitpasswordRegis placeholder="Repita Contraseña">
-  <div class="boton">
-      <button type="button" (click)=insertarUsuario(nameRegis.value,apellidoRegis.value,emailRegis.value,urlRegis.value,passwordRegis.value,repitpasswordRegis.value) class="moreInf">Registrarme</button>
-  </div>      
+  <h1 class="titleReg">REGISTRO USUARIOS</h1>
+
+
+  <form #userForm="ngForm" (ngSubmit)="insertarUsuario(userForm)">
+
+
+    <div class="form-group">
+      <label class="txtLabel">Nombre</label>
+      <input type="text" name="nombre" class="form-control" [(ngModel)]="user.nombre" #nombre="ngModel"
+        [ngClass]="{'is-invalid':(nombre.dirty || nombre.touched) && nombre.invalid }" required>
+
+      <div class="invalid" *ngIf="(nombre.dirty || nombre.touched) && nombre.invalid">
+        <p *ngIf="nombre.errors.required">El Nombre es obligario</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="txtLabel">Apellidos</label>
+      <input type="text" class="form-control" name="apellidos" [(ngModel)]="user.apellidos" #apellidos="ngModel"
+        [ngClass]="{ 'is-invalid': (apellidos.dirty || apellidos.touched) && apellidos.invalid }" required>
+      <div class="invalid" *ngIf="(apellidos.dirty || apellidos.touched) && apellidos.invalid">
+        <p *ngIf="apellidos.errors.required">El apellido es obligario</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="txtLabel">Email</label>
+      <input type="email" class="form-control" name="correo" [(ngModel)]="user.correo" #correo="ngModel" email required
+        [ngClass]="{ 'is-invalid': (correo.dirty || correo.touched) && correo.invalid }">
+      <div class="invalid" *ngIf="(correo.dirty || correo.touched) && correo.invalid">
+        <p *ngIf="correo.errors.required">El Email es obligario</p>
+        <p *ngIf="correo.errors.email">Email no valido</p>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label class="txtLabel">Foto URL</label>
+      <input type="url" name="foto" class="form-control" [(ngModel)]="user.foto" #foto="ngModel" required
+        [ngClass]="{ 'is-invalid': (foto.dirty || foto.touched) && foto.invalid }">
+      <div class="invalid" *ngIf="(foto.dirty || foto.touched) && foto.invalid">
+        <p *ngIf="foto.errors.required">La foto es obligario</p>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="txtLabel">Contraseña</label>
+      <input type="password" name="password" class="form-control" [(ngModel)]="user.password" #password="ngModel"
+        minlength="8" required [ngClass]="{ 'is-invalid': (password.dirty || password.touched) && password.invalid }">
+      <div class="invalid" *ngIf="(password.dirty || password.touched) && password.invalid">
+        <p *ngIf="password.errors.required">La contraseña es obligatoria</p>
+        <p *ngIf="password.errors.minlength">La contraseña muy corta</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="txtLabel">Repita Contraseña</label>
+      <input type="password" class="form-control" #repitpasswordRegis required>
+    </div>
+    <button class="moreInf" [disabled]="!userForm.valid">Submit</button>
+
+
+
+  </form>
 </article>

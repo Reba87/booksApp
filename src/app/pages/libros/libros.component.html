@@ -2,28 +2,12 @@
 
     <article class="buscadora">
         <input type="number"placeholder="Busca un libro por ID" class="buscador" #id_Libro/>
-         <button class="btn-comprar" type="reset" (click)= getbuscar(id_Libro.value)>Buscar</button>
+         <button class="btn-buscar" type="reset" (click)= getbuscar(id_Libro.value)>Buscar</button>
     </article>
         
-    <article class="container-books">
-
-        <div class="card-libro" *ngFor ="let libros of this.misLibros let even=even let odd=odd">;
-            <div class="containerFoto">
-                <button class="btnEliminar" (click)=deletLibro(libros.id_libro)>X</button>
-                <img class="fotoBook" src="{{libros.foto}}">
-                
-            </div>
-            <p class="tipoLibro">{{libros.tipoLibro}}</p>           
-            <h5 class="titleLibro">{{libros.titulo}} </h5>
-            <p class="autor">Autor: {{libros.autor }}</p>
-           <div class="infoLibro">
-                <p class="precio"> {{libros.precio}}€ </p>
-                <p class="idLibro"> {{libros.id_libro | ref}}</p>
-                <button [ngClass]="{'evenbtn-comprar':even,'btn-comprar':odd}"  type="reset">Comprar</button>
-           </div>
-           
-        </div>       
-       
+    <article class="container-books" *ngFor ="let libros of misLibros; let even=even let odd=odd">
+        <app-cards [cards]="libros" [even]="even" [odd]="odd"(eliminoLibro)="deletLibro($event)"  ></app-cards>
+               
     </article>
   </section>
   

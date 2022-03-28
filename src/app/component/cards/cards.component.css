@@ -1,0 +1,163 @@
+
+.card-libro {
+    width: 200px;
+    height: 420px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.76);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.603);
+  }
+  .containerFoto{
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .btnEliminar{
+    position:absolute;
+    width:25px;
+    height:25px;
+    border-radius: 25px;
+    color:rgba(255, 255, 255, 0.37);
+    background-color:rgba(255, 0, 0, 0.158);
+    font-weight:bolder;
+    font-size:18px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 5px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.603);
+    align-items: center;
+  }
+  .btnEliminar:hover{
+    background-color: red;
+    color:white;
+  }
+  .fotoBook {
+    width: 200px;
+    height: 230px;
+    border-radius: 5px;
+  }
+  .tipoLibro {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 12px;
+    border-bottom: 2px solid black;
+    width: 200px;
+    margin-top: 10px;
+   
+  }
+  .titleLibro {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .autor {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .infoLibro {
+    width: 180px;
+    height: 70px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .precio {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 24px;
+  }
+  .idLibro {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 12px;
+  }
+  .btn-comprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 38px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    color: #ffffff;
+    background-color: #ff0000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.15s linear;
+    width: 100px;
+    height: 30px;
+   
+  }
+  
+  .btn-comprar:hover {
+    background-color: rgba(33, 197, 0, 0.904);
+    border-color: #1add00;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  .btn-comprar:active {
+    background-color: rgb(0, 211, 0);
+    border-color: rgb(0, 211, 0);
+    color: #000000;
+    transform: translateY(5px) scale(0.95);
+  }
+  
+  .btn-comprar:disabled {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #8e8e93;
+    border-color: #8e8e93;
+  }
+  .noExiste {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 60px;
+    color: white;
+  }
+  
+  
+  
+  
+  /*OTRO BOTON */
+  .evenbtn-comprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 38px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    color: #ffffff;
+    background-color: #3801ff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.15s linear;
+    width: 100px;
+    height: 30px;
+    
+  }
+  
+  .evenbtn-comprar:hover {
+    background-color: rgba(33, 197, 0, 0.904);
+    border-color: #1add00;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  .evenbtn-comprar:active {
+    background-color: rgb(0, 211, 0);
+    border-color: rgb(0, 211, 0);
+    color: #000000;
+    transform: translateY(5px) scale(0.95);
+  }
+  
+  .evenbtn-comprar:disabled {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #8e8e93;
+    border-color: #8e8e93;
+  }

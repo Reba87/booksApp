@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsuarioService} from 'src/app/shared/usuario.service';
 import {Usuario} from '../../../app/models/usuario';
 import {Router} from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,17 +11,22 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private apiService: UsuarioService,private router: Router) { }
+  public user:Usuario
+
+  constructor(private apiService: UsuarioService,private router: Router) {
+  
+    this.user= new Usuario()
+
+   }
 
   ngOnInit(): void {
   }
 
-  loginUsuario(
-    correo:string,
-    password:string
-  ){
-    let usuario = new Usuario(0,"","",correo,"",password);
-    this.apiService.postLogin(usuario).subscribe((data:any) => {
+
+
+  loginUsuario(form:NgForm){
+    
+    this.apiService.postLogin(this.user).subscribe((data:any) => {
       if(data.length == 0 ){
         alert("datos invalidos")
       }
@@ -33,4 +39,12 @@ export class LoginComponent implements OnInit {
       
     })
   }
+
+//  {
+//     this.apiService.postUsuario(this.user)
+//             .subscribe((data) => {
+//               console.log(data);
+//               alert("Usuario registrado")
+//             });
+//     }
 }

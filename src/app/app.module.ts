@@ -16,6 +16,8 @@ import { RefPipe } from './pipe/ref.pipe';
 import { RegistrolibroComponent } from './pages/registrolibro/registrolibro.component';
 import { ToArrayPipe } from './pipe/to-array.pipe';
 import { LoginComponent } from './pages/login/login.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CardsComponent } from '../app/component/cards/cards.component'
 
 @NgModule({
   declarations: [
@@ -31,12 +33,17 @@ import { LoginComponent } from './pages/login/login.component';
     RefPipe,
     RegistrolibroComponent,
     ToArrayPipe,
-    LoginComponent
+    LoginComponent,
+    CardsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,77 +1,43 @@
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Libro } from '../models/libro';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LibrosService {
-  
+  private url = 'http://localhost:5000/libros';
+  private urlBuscar = 'http://localhost:5000/libros/buscar';
 
-  private url="http://localhost:5000/libros"
-  private urlBuscar = "http://localhost:5000/libros/buscar"
+  constructor(private http: HttpClient) {}
 
-
-  constructor(private http: HttpClient){}
-
-  public getLibros(idUsuario:number)
-  { 
-    return this.http.get(this.url + "/?id=" + idUsuario)
+  public getLibros(idUsuario: number) {
+    return this.http.get(this.url + '/?id=' + idUsuario);
   }
 
-  public getBuscar(idUsuario:number,id_libro:number)
-  { 
-    return this.http.get(this.urlBuscar + "?id_usuario=" + idUsuario + "&" +"id_book=" + id_libro)
+  public getBuscar(idUsuario: number, id_libro: number) {
+    return this.http.get(
+      this.urlBuscar + '?id_usuario=' + idUsuario + '&' + 'id_book=' + id_libro
+    );
   }
 
-  public postLibro(newLibro:Libro)
-  {
-    return this.http.post(this.url,newLibro)
+  public postLibro(newLibro: Libro) {
+    return this.http.post(this.url, newLibro);
   }
 
-  putLibro(newLibro:Libro){
-    return this.http.put(this.url, newLibro)
+  putLibro(newLibro: Libro) {
+    return this.http.put(this.url, newLibro);
   }
 
-  deleteLibro(idlibro:number){
-    return this.http.delete(this.url + "/?id=" + idlibro)
+  deleteLibro(idlibro: number) {
+    return this.http.delete(this.url + '/?id=' + idlibro);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // public getAll() {
   //   return this.libros;
   // }
 
   // public buscar(id: number) {
-    
 
   //   for (let libro of this.libros) {
   //     if (libro.id_libro === id) {
@@ -85,10 +51,9 @@ export class LibrosService {
   //     }
   //   }
 
-    
   // }
 
-  // buscar(id: number) 
+  // buscar(id: number)
   // {
   //   for (let libro of this.libros) {
   //     if (libro.id_libro == id) {
@@ -99,12 +64,12 @@ export class LibrosService {
   //           return lista
   //         }
   //         else if(libro.id_libro == NaN) {
-            
+
   //         }
   //       }
-        
+
   //     }
-      
+
   //   }
   //   return this.libros
   // }
@@ -136,17 +101,17 @@ export class LibrosService {
   //   console.log(this.libros);
   // }
 
-//  public deleteLibro(id: number) {
-//     for (let libro of this.libros) {
-//       if (libro.id_libro == id) {
-//         for (let i = 0; i < this.libros.length; i++) {
-//           if (libro.id_libro == this.libros[i].id_libro) {
-//             this.libros.splice(i, 1);
-            
-//           }
-//         }
-//       }
-//     }
-//     return this.libros
-//   }
+  //  public deleteLibro(id: number) {
+  //     for (let libro of this.libros) {
+  //       if (libro.id_libro == id) {
+  //         for (let i = 0; i < this.libros.length; i++) {
+  //           if (libro.id_libro == this.libros[i].id_libro) {
+  //             this.libros.splice(i, 1);
+
+  //           }
+  //         }
+  //       }
+  //     }
+  //     return this.libros
+  //   }
 }

@@ -1,0 +1,17 @@
+
+
+<div class="card-libro">
+    <div class="containerFoto">
+        <button class="btnEliminar" (click)=deletLibro(cards.id_libro)>X</button>
+        <img class="fotoBook" src="{{cards.foto}}" alt="">
+        
+    </div>
+    <h5 class="titleLibro">{{cards.titulo}} </h5>
+    <p class="autor">Autor: {{cards.autor }}</p>
+   <div class="infoLibro">
+        <p class="precio"> {{cards.precio}}€ </p>
+        <p class="idLibro"> {{cards.id_libro | ref}}</p>
+        <button [ngClass]="{'evenbtn-comprar':even,'btn-comprar':odd}"  type="reset">Comprar</button>
+   </div>
+   
+</div>  

@@ -10,25 +10,26 @@
 }
 .libros {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: spa;  
+  min-height: 100vh;
+  max-height: 200vh; 
   background-image: url("../../../assets/fondoLibros.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  max-height: 200vh;
   overflow: hidden;
 }
-.buscadora{
- 
+
+.buscadora{ 
   display:flex;
   flex-wrap: nowrap;
   width:800px;
   height:50px;
   justify-content:center;
   align-items:flex-end;
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 10px;
 }
 .buscador {
   background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
@@ -42,10 +43,50 @@
   outline: none;
   border-radius: 5px;
 }
+.btn-buscar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px 38px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  background-color: #0059ff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.15s linear;
+  width: 100px;
+  height: 30px;
+  margin-left: 5px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size:16px;
+}
+
+.btn-buscar:hover {
+  background-color: rgba(33, 197, 0, 0.904);
+  border-color: #1add00;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.btn-buscar:active {
+  background-color: rgb(0, 211, 0);
+  border-color: rgb(0, 211, 0);
+  color: #000000;
+  transform: translateY(5px) scale(0.95);
+}
+
+.btn-buscar:disabled {
+  background-color: #0059ff75;
+  color: #cecece;
+  
+}
 
 
 /*CONTENEDOR LIBROS*/
-.container-books {  
+ .container-books {  
   min-width: 100%;
   min-height: 100vh;
   margin-top: 10px;
@@ -171,13 +212,13 @@
   font-family: "Merriweather Sans", sans-serif;
   font-size: 60px;
   color: white;
-}
+} 
 
 
 
 
 /*OTRO BOTON */
-.evenbtn-comprar {
+/* .evenbtn-comprar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -213,4 +254,4 @@
   background-color: rgba(255, 255, 255, 0.16);
   color: #8e8e93;
   border-color: #8e8e93;
-}
+} */

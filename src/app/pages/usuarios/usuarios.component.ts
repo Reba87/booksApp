@@ -13,12 +13,7 @@ export class UsuariosComponent implements OnInit {
   { 
     this.miUsuario = new Usuario
     (
-    1,
-    "",
-    "",
-    "",
-    "",
-    ""
+    
     );
   }
 
@@ -38,7 +33,7 @@ export class UsuariosComponent implements OnInit {
       this.miUsuario.correo = nuevoCorreo;
     }
     if(nuevoURL != ""){
-      this.miUsuario.url = nuevoURL;
+      this.miUsuario.foto = nuevoURL;
     }
     if(nuevoPassword != ""){
       this.miUsuario.password = nuevoPassword;

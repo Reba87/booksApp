@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: 'usuarios', component:UsuariosComponent},
   {path: 'libros', component:LibrosComponent},
   {path: 'registro-libros', component:RegistrolibroComponent},
-  {path: 'Login', component:LoginComponent}
+  {path: 'Login', component:LoginComponent},
+  {path: 'http://localhost:4200/', redirectTo:'home'}
 ];
 
 @NgModule({

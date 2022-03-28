@@ -3,13 +3,34 @@
     <article class="registro">
         <img class="logo" src="../../../assets/logo.png">
         <h1 class="titleReg">The Book Place</h1>
-        <input type="text" class="login" #correo placeholder="Correo">
-        <input type="password" class="login" #contrasena placeholder="Contraseña">
-        
+
+    <form #userForm="ngForm" (ngSubmit)="loginUsuario(userForm)">
+
+        <div class="form-group">
+        <label class="txtLabel">Email</label>
+        <input type="text" name="correo" class="form-control" [(ngModel)]="user.correo" #correo="ngModel" email required
+        [ngClass]="{ 'is-invalid': (correo.dirty || correo.touched) && correo.invalid }">
+      <div class="invalid" *ngIf="(correo.dirty || correo.touched) && correo.invalid">
+        <p *ngIf="correo.errors.required">El correo es obligario</p>
+        <p *ngIf="correo.errors.email">Email no valido</p>
+      </div>
+    </div>
+
+
+    <div class="form-group"> 
+      <label class="txtLabel">Contraseña</label>
+        <input type="password" name="password" class="form-control" [(ngModel)]="user.password" #password="ngModel" required
+        [ngClass]="{ 'is-invalid': (password.dirty || password.touched) && password.invalid }">
+      <div class="invalid" *ngIf="(password.dirty || password.touched) && password.invalid">
+        <p *ngIf="password.errors.required">El correo es obligario</p>        
+      </div>
+    </div>        
       <div class="boton">
-          <button type="button" class="btn-login" (click)=loginUsuario(correo.value,contrasena.value)>Iniciar sesión</button>          
+          <button  class="btn-login" [disabled]="!userForm.valid">Iniciar sesión</button>          
       </div>    
       <a  type="button" class="txtNuevo" routerLink="/registro">¿No tienes cuenta? Registrate</a>  
+
+    </form>
     </article>
     
     

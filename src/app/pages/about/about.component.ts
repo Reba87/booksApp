@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
     public miUsuario : Usuario;
   constructor() 
   { 
-    this.miUsuario = new Usuario(1,"Rafael","Aponte","rafa@gmail.com","asdasd","clave");
+    
 
   }
 
